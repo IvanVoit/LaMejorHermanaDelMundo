@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños ✿</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Corazones y pétalos flotantes de fondo (los genera script.js) -->
+<div class="floaters" id="floaters" aria-hidden="true"></div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="hero-frame">
+    <p class="eyebrow">Un día especial para</p>
+    <h1 class="hero-title">
+      <span class="hero-name" id="nombre-hermana">❤️ Assíia ❤️</span>
+    </h1>
+    <p class="hero-sub">Feliz cumpleaños te quiero con todo mi corazón</p>
+    <div class="hero-divider" aria-hidden="true">
+      <svg viewBox="0 0 100 20" class="heart-mini"><path d="M50 17 C 20 0, 0 8, 10 -2 C 20 -10, 50 5, 50 5 C 50 5, 80 -10, 90 -2 C 100 8, 80 0, 50 17 Z" transform="translate(0,6)"/></svg>
+    </div>
+  </div>
+  <button class="scroll-cue" id="scrollCue" aria-label="Bajar">
+    <span></span>
+  </button>
+</header>
+
+<!-- ===================== GALERÍA 1 ===================== -->
+<section class="gallery-section" id="galeria-1">
+  <h2 class="section-title">😄 Pequeños recuerdos 😄​</h2>
+  <div class="scrapbook">
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/assiia9.jpg">
+        <img src="Fotos/assiia9.jpg" alt="Recuerdo 1" onerror="marcarFotoFaltante(this)">
+      </div>
+      <figcaption>Entrenando boxeo</figcaption>
+    </figure>
+
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/assiia15.jpg">
+        <img src="Fotos/assiia15.jpg" alt="Recuerdo 2" onerror="marcarFotoFaltante(this)">
+      </div>
+      <figcaption>Esquiando en Andorra</figcaption>
+    </figure>
+
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/assiia11.jpg">
+        <img src="Fotos/assiia11.jpg" alt="Recuerdo 3" onerror="marcarFotoFaltante(this)">
+      </div>
+      <figcaption>Disfrazada de zorro</figcaption>
+    </figure>
+
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/juntos28.jpg">
+        <img src="Fotos/juntos28.jpg" alt="Recuerdo 4" onerror="marcarFotoFaltante(this)">
+      </div>
+      <figcaption>Ataque alienigena</figcaption>
+    </figure>
+
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/assiia23.jpg">
+        <img src="Fotos/assiia23.jpg" alt="Recuerdo 5" onerror="marcarFotoFaltante(this)">
+      </div>
+      <figcaption>Tatuada hospitalizada</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== CARTA / TEXTO LARGO ===================== -->
+<section class="letter-section" id="carta">
+  <div class="letter-card">
+    <div class="corner corner-tl" aria-hidden="true">✿</div>
+    <div class="corner corner-tr" aria-hidden="true">✿</div>
+    <div class="corner corner-bl" aria-hidden="true">✿</div>
+    <div class="corner corner-br" aria-hidden="true">✿</div>
+
+    <p class="letter-kicker">Para ti</p>
+    <h2 class="letter-title">❤️ Una cartita ❤️</h2>
+
+    <div class="letter-body" id="texto-largo">
+      <p>Hola Assíia, tu ya sabes que yo soy muy malo para estas cosas, pero bueno igualmente lo quiero intentar y simplemente dire lo que pienso y siento. Te escribo esta carta para expresas todo aquello que no te pude decir a la cara o no muestro o he mostrado todo este tiempo, ya se que últimamente no pasamos tanto tiempo juntos o por lo menos ya no como antes, pero eso no quita que te sigo queriendo y apreciando igual que antes. Tu eres de las pocas personas que siempre has estado ahí para apoyarme y ayudarme en lo que necesite, siempre has estado ahí cuando mas lo he necesitado y me has dado fuerzas y el apoyo que necesito. Pero hoy no estamos para hablar de mí si no de ti, digo todo eso simplemente para agradecerte todo lo que has hecho por mi y decirte que yo siempre estaré a tu lado para lo que me necesites igual que tu siempre has estado. Si algún dia te sientes triste, enfadada, cansada o cualquier cosa, solo dimelo y yo te ayudare sin pensarlo dos veces.</p>
+      <p>Bueno, con todo eso dicho te quería decir lo mucho que hecho de menos todos esos momentos que hemos estado juntos, todas esas tardes de salir al parque, salir a dar vueltas, estar en el patio en primaria siempre juntos, recoger basura y pedir dinero por el reciclaje (jsjsjsj), bajar al patio de la casa bloc y hacer ahí de TODO, que si bases, que si un rio, que si plantar plantas, de todo básicamente. Y muchisimas cosas más, pero si me pongo a escribir todo lo que hemos hecho juntos, esta sería la carta más grande de la historia. Todo eso, aunque parezcan cosas pequeñas sin significado, son todo con lo que realmente te quedas de una persona y esto es solo una pequeña parte por lo que te quiero tanto.</p>
+      <p>Con todo esto dicho, espero que entiendas lo mucho que te quiero y que siempre estare a tu lado para todo lo que necesites. Tambien quiero que sepas que todo lo que te propongas lo puedes conseguir, y ya se que suena a frase barata de cartas tipicas pero va enserio, si vas a querer ser juez, si realmente te pones a estudiar y te lo tomas enserio, sea juez, sea abogada, sea medica, sea lo que sea lo puedes lograr, solo tienes que enfocarte en ello y lo conseguiras, te lo prometo. Feliz cumpleaños, mi hermanita favorita. Te quiero mucho ❤️</p>
+    </div>
+
+    <p class="letter-signoff">Con todo mi cariño,<br><span>Tu hermanito Ivan</span></p>
+  </div>
+</section>
+
+<!-- ===================== SIEMPRE JUNTOS ===================== -->
+<section class="gallery-section" id="siempre-juntos">
+  <h2 class="section-title">🤗 Siempre juntos 🤗</h2>
+  <div class="scrapbook scrapbook-alt">
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/juntos1.jpg"><img src="Fotos/juntos1.jpg" alt="Juntos 1" onerror="marcarFotoFaltante(this)"></div>
+
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/juntos2.jpg"><img src="Fotos/juntos2.jpg" alt="Juntos 2" onerror="marcarFotoFaltante(this)"></div>
+
+    </figure>
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/juntos3.jpg"><img src="Fotos/juntos3.jpg" alt="Juntos 3" onerror="marcarFotoFaltante(this)"></div>
+
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/juntos4.jpg"><img src="Fotos/juntos4.jpg" alt="Juntos 4" onerror="marcarFotoFaltante(this)"></div>
+
+    </figure>
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/juntos21.jpg"><img src="Fotos/juntos21.jpg" alt="Juntos 5" onerror="marcarFotoFaltante(this)"></div>
+
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/juntos6.jpg"><img src="Fotos/juntos6.jpg" alt="Juntos 6" onerror="marcarFotoFaltante(this)"></div>
+
+    </figure>
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/juntos7.jpg"><img src="Fotos/juntos7.jpg" alt="Juntos 7" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/juntos8.jpg"><img src="Fotos/juntos8.jpg" alt="Juntos 8" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/juntos10.jpg"><img src="Fotos/juntos10.jpg" alt="Juntos 9" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/juntos13.jpg"><img src="Fotos/juntos26.jpg" alt="Juntos 10" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/juntos21.jpg"><img src="Fotos/juntos21.jpg" alt="Juntos 10" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/juntos13.jpg"><img src="Fotos/juntos13.jpg" alt="Juntos 10" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== BOTÓN DEL JUEGO ===================== -->
+<section class="game-cta-section">
+  <button class="game-cta" id="abrirJuego">
+    <svg viewBox="0 0 32 29" class="game-cta-heart"><path d="M16 29 C 16 29, 0 18, 0 8.5 C 0 2, 6 0, 9 0 C 13 0, 16 3, 16 3 C 16 3, 19 0, 23 0 C 26 0, 32 2, 32 8.5 C 32 18, 16 29, 16 29 Z"/></svg>
+    Juego de recuerdos
+  </button>
+</section>
+
+<!-- ===================== JUEGO: UNE LOS RECUERDOS ===================== -->
+<section class="game-section hidden" id="juego">
+  <h2 class="section-title">Une cada foto con su recuerdo</h2>
+
+  <p class="game-progress" id="gameProgress">0 / 5 encontrados</p>
+
+  <div class="game-board" id="gameBoard">
+    <div class="game-column game-column--images" id="gameImages">
+      <div class="game-image" data-pair="1">
+        <div class="polaroid-photo" data-file="Fotos/juntos12.jpg"><img src="Fotos/juntos12.jpg" alt="Foto 1" onerror="marcarFotoFaltante(this)"></div>
+      </div>
+      <div class="game-image" data-pair="2">
+        <div class="polaroid-photo" data-file="Fotos/assiia16.jpg"><img src="Fotos/assiia16.jpg" alt="Foto 2" onerror="marcarFotoFaltante(this)"></div>
+      </div>
+      <div class="game-image" data-pair="3">
+        <div class="polaroid-photo" data-file="Fotos/assiia14.jpg"><img src="Fotos/assiia14.jpg" alt="Foto 3" onerror="marcarFotoFaltante(this)"></div>
+      </div>
+      <div class="game-image" data-pair="4">
+        <div class="polaroid-photo" data-file="Fotos/assiia19.jpg"><img src="Fotos/assiia19.jpg" alt="Foto 4" onerror="marcarFotoFaltante(this)"></div>
+      </div>
+      <div class="game-image" data-pair="5">
+        <div class="polaroid-photo" data-file="Fotos/assiia25.jpg"><img src="Fotos/assiia25.jpg" alt="Foto 5" onerror="marcarFotoFaltante(this)"></div>
+      </div>
+    </div>
+
+    <div class="game-column game-column--texts" id="gameTexts">
+      <div class="game-text" data-pair="3">
+        <p>En el sushi con la familia 🍣🤤</p>
+      </div>
+      <div class="game-text" data-pair="1">
+        <p>De subida al montjuic YUJUUUU 🏔️​</p>
+      </div>
+      <div class="game-text" data-pair="5">
+        <p>En la feriaaa (que guaaaayyy) 🎡​</p>
+      </div>
+      <div class="game-text" data-pair="4">
+        <p>Comiendo en la Barbacoa (que buenooo) 🍖</p>
+      </div>
+      <div class="game-text" data-pair="2">
+        <p>Cuando te estaba molestando en tu habitacion AAJAJAJAJA 😅​</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="game-complete hidden" id="gameComplete">🤩¡Los recordaste todos superassiiiaaaaa!🤩​</p>
+</section>
+
+<!-- ===================== MÁS FOTOS ===================== -->
+<section class="gallery-section" id="mas-fotos">
+  <h2 class="section-title">Y porque no... 📷 MÁS FOTOS 📷​</h2>
+  <div class="scrapbook scrapbook-alt">
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/mas-01.jpg"><img src="Fotos/assiia1.jpg" alt="Foto 1" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/mas-02.jpg"><img src="Fotos/assiia2.jpg" alt="Foto 2" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/mas-03.jpg"><img src="Fotos/assiia3.jpg" alt="Foto 3" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/mas-04.jpg"><img src="Fotos/assiia4.jpg" alt="Foto 4" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/mas-05.jpg"><img src="Fotos/assiia5.jpg" alt="Foto 5" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/mas-06.jpg"><img src="Fotos/assiia6.jpg" alt="Foto 6" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/mas-07.jpg"><img src="Fotos/assiia7.jpg" alt="Foto 7" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/mas-08.jpg"><img src="Fotos/assiia8.jpg" alt="Foto 8" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/mas-09.jpg"><img src="Fotos/juntos5.jpg" alt="Foto 9" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/mas-10.jpg"><img src="Fotos/assiia10.jpg" alt="Foto 10" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/mas-11.jpg"><img src="Fotos/juntos17.jpg" alt="Foto 11" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/mas-12.jpg"><img src="Fotos/juntos22.jpg" alt="Foto 12" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/mas-13.jpg"><img src="Fotos/assiia13.jpg" alt="Foto 13" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/mas-14.jpg"><img src="Fotos/assiia30.jpg" alt="Foto 14" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/mas-15.jpg"><img src="Fotos/assiia26.jpg" alt="Foto 15" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-1">
+      <div class="polaroid-photo" data-file="Fotos/mas-16.jpg"><img src="Fotos/juntos24.jpg" alt="Foto 16" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-2">
+      <div class="polaroid-photo" data-file="Fotos/mas-17.jpg"><img src="Fotos/juntos25.jpg" alt="Foto 17" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-3">
+      <div class="polaroid-photo" data-file="Fotos/mas-18.jpg"><img src="Fotos/assiia20.jpg" alt="Foto 18" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-4">
+      <div class="polaroid-photo" data-file="Fotos/mas-19.jpg"><img src="Fotos/assiia21.jpg" alt="Foto 19" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+    <figure class="polaroid rot-5">
+      <div class="polaroid-photo" data-file="Fotos/mas-20.jpg"><img src="Fotos/assiia22.jpg" alt="Foto 20" onerror="marcarFotoFaltante(this)"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <svg viewBox="0 0 100 20" class="heart-mini heart-mini--footer"><path d="M50 17 C 20 0, 0 8, 10 -2 C 20 -10, 50 5, 50 5 C 50 5, 80 -10, 90 -2 C 100 8, 80 0, 50 17 Z" transform="translate(0,6)"/></svg>
+  <p>❤️ Hecho con mucho cariño para ti hermanita ❤️</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
