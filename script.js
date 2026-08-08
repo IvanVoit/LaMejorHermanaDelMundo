@@ -1,4 +1,15 @@
 // =========================================================
+// Se llama desde el atributo onerror de cada <img> cuando la
+// foto todavía no existe en la carpeta Fotos/
+// =========================================================
+function marcarFotoFaltante(img) {
+  const contenedor = img.closest('.polaroid-photo');
+  if (contenedor) {
+    contenedor.classList.add('placeholder');
+  }
+}
+
+// =========================================================
 // Corazones / pétalos flotando de fondo
 // =========================================================
 (function generarFloaters() {
@@ -40,6 +51,117 @@
     if (siguiente) {
       siguiente.scrollIntoView({ behavior: 'smooth' });
     }
+  });
+})();
+
+// =========================================================
+// Botón "Juego de recuerdos": revela la sección del juego
+// =========================================================
+(function abrirJuego() {
+  const boton = document.getElementById('abrirJuego');
+  const juego = document.getElementById('juego');
+  if (!boton || !juego) return;
+
+  boton.addEventListener('click', () => {
+    juego.classList.remove('hidden');
+    juego.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    boton.style.display = 'none';
+  });
+})();
+
+// =========================================================
+// Minijuego: arrastra cada foto hasta su texto correspondiente
+// =========================================================
+(function juegoDeRecuerdos() {
+  const imagenes = document.querySelectorAll('.game-image');
+  const textos = document.querySelectorAll('.game-text');
+  const progresoEl = document.getElementById('gameProgress');
+  const completoEl = document.getElementById('gameComplete');
+
+  if (imagenes.length === 0 || textos.length === 0) return;
+
+  const TOTAL = imagenes.length;
+  let aciertos = 0;
+
+  imagenes.forEach(imagen => {
+    let startX = 0, startY = 0;
+    let arrastrando = false;
+
+    imagen.addEventListener('pointerdown', (e) => {
+      if (imagen.classList.contains('matched')) return;
+      arrastrando = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      imagen.classList.add('dragging');
+      // Capturamos el puntero para que, aunque nos movamos rápido
+      // o salgamos del elemento (incluso cerca del borde de la
+      // pantalla), sigamos recibiendo los eventos de este arrastre.
+      imagen.setPointerCapture(e.pointerId);
+      e.preventDefault();
+    });
+
+    imagen.addEventListener('pointermove', (e) => {
+      if (!arrastrando) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      imagen.style.transform = `translate(${dx}px, ${dy}px) scale(1.05)`;
+
+      // resaltar el texto sobre el que pasamos
+      textos.forEach(t => t.classList.remove('drop-hover'));
+      const debajo = document.elementFromPoint(e.clientX, e.clientY);
+      const textoDebajo = debajo ? debajo.closest('.game-text') : null;
+      if (textoDebajo && !textoDebajo.classList.contains('matched')) {
+        textoDebajo.classList.add('drop-hover');
+      }
+    });
+
+    const soltar = (e) => {
+      if (!arrastrando) return;
+      arrastrando = false;
+
+      // Importante: comprobamos qué hay debajo ANTES de quitar
+      // la clase 'dragging', porque esa clase es la que hace que
+      // la propia foto no bloquee la detección (pointer-events: none).
+      const debajo = document.elementFromPoint(e.clientX, e.clientY);
+      const textoDebajo = debajo ? debajo.closest('.game-text') : null;
+
+      imagen.classList.remove('dragging');
+      textos.forEach(t => t.classList.remove('drop-hover'));
+
+      if (textoDebajo && !textoDebajo.classList.contains('matched') &&
+          textoDebajo.dataset.pair === imagen.dataset.pair) {
+        // ¡Acierto!
+        imagen.style.transform = '';
+        imagen.classList.add('matched');
+
+        const miniFoto = imagen.querySelector('.polaroid-photo');
+        if (miniFoto) {
+          const contenedorFoto = document.createElement('div');
+          contenedorFoto.className = 'game-text-photo';
+          contenedorFoto.appendChild(miniFoto);
+          textoDebajo.prepend(contenedorFoto);
+        }
+
+        textoDebajo.classList.add('matched');
+        aciertos++;
+        if (progresoEl) progresoEl.textContent = `${aciertos} / ${TOTAL} encontrados`;
+
+        if (aciertos === TOTAL && completoEl) {
+          completoEl.classList.remove('hidden');
+        }
+      } else if (textoDebajo) {
+        // Intento fallido sobre un texto
+        imagen.style.transform = '';
+        imagen.classList.add('shake');
+        setTimeout(() => imagen.classList.remove('shake'), 500);
+      } else {
+        // Soltada fuera de cualquier texto: vuelve a su sitio
+        imagen.style.transform = '';
+      }
+    };
+
+    imagen.addEventListener('pointerup', soltar);
+    imagen.addEventListener('pointercancel', soltar);
   });
 })();
 
